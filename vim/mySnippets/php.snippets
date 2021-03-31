@@ -1,0 +1,60 @@
+snippet <? "PHP file definition" b
+<?php
+
+${0}
+endsnippet
+
+snippet class "PHP Class Definition" b
+<?php
+
+namespace ${1};
+
+# Set classname to filename without extension
+class `!v expand('%:t:r')` {
+
+${0}
+}
+endsnippet
+
+snippet pubf "Public method" !b
+public function ${1}(${2}) 
+{
+    ${0}
+}
+endsnippet
+
+snippet prof "Protected method" !b
+protected function ${1}(${2})
+{
+    ${0}
+}
+endsnippet
+
+snippet prif "Private method" !b
+private function ${1}(${2})
+{
+    ${0}
+}
+endsnippet
+
+snippet pubsf "Public static method" !b
+public static function ${1}(${2})
+{
+    ${0}
+}
+endsnippet
+
+snippet dd "var_dump" !b
+var_dump(${1});${0}
+endsnippet
+
+snippet $ "Property or method on current object" !b
+$this->${1};${0}
+endsnippet
+
+snippet _c "Constuctor method" !b
+public function __construct(${1})
+{
+    ${0}
+}
+endsnippet
